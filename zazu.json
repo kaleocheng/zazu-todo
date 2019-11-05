@@ -1,0 +1,23 @@
+{
+  "name": "zazu-todo",
+  "version": "1.0.0",
+  "description": "Zazu plugin that open my todo list page",
+  "blocks": {
+    "input": [
+      {
+        "id": "todo",
+        "type": "PrefixScript",
+        "prefix": "todo",
+        "script": "index.js",
+        "connections": ["OpenTodo"]
+      }
+    ],
+    "output": [
+      {
+        "id": "OpenTodo",
+        "type": "OpenInBrowser",
+        "url": "{value}"
+      }
+    ]
+  }
+}
