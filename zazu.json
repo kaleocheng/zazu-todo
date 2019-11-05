@@ -6,13 +6,19 @@
     "input": [
       {
         "id": "todo",
-        "type": "PrefixScript",
-        "prefix": "todo",
-        "script": "index.js",
-        "connections": ["OpenTodo"]
+        "type": "Keyword",
+        "keyword": "todo",
+        "title": "Open todo list",
+        "connections": ["GetURL"]
       }
     ],
     "output": [
+      {
+        "id": "GetURL",
+        "type": "UserScript",
+        "script": "index.js",
+        "connections": ["OpenTodo"]
+      },
       {
         "id": "OpenTodo",
         "type": "OpenInBrowser",
